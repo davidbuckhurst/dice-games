@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ColourRow {
+  border-style: solid;
+  color: lightgrey;
+  margin: 5px;
+  border-spacing: 5px;
+  border-width: 2px;
+
+}
+
+.ScoreBoard {
+  border-style: solid;
+  color: black;
+}
+
+.Number {
+  border-style: solid;
+  display: table-cell;
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  border-radius: 5px;
+  border-width: 2px;
+  color: black;
+}
+
+.Red {
+  background-color: red;
+}
+
+.Green {
+  background-color: green;
+}
+
+.Blue {
+  background-color: blue;
+}
+
+.Yellow {
+  background-color: yellow;
+}
+
+.Checked {
+  background-color: black;
+  opacity: 50%;
+}
+
+.Unchecked {
+
+}
