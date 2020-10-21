@@ -12,13 +12,34 @@ code {
     monospace;
 }
 
+
+.Red {
+  background-color: red;
+  color: red;
+}
+
+.Green {
+  background-color: green;
+  color: green;
+}
+
+.Blue {
+  background-color:  rgb(50,50,200);
+  color:  rgb(50,50,200);
+}
+
+.Yellow {
+  background-color: rgb(240,210,110);
+  color: rgb(240,210,110);
+}
+
+
+
 .ColourRow {
   border-style: solid;
-  color: lightgrey;
-  margin: 5px;
-  border-spacing: 5px;
   border-width: 2px;
-
+  border-color: white;
+  border-radius: 15px;
 }
 
 .ScoreBoard {
@@ -26,34 +47,53 @@ code {
   color: black;
 }
 
+
+
 .Number {
-  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
   display: table-cell;
+  font-size: 25px;
+  border-width: 7px;
+  border-radius: 15px;
+  border-style: solid;
   width: 50px;
-  height: 30px;
+  height: 33px;
   margin: 5px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  border-radius: 5px;
-  border-width: 2px;
-  color: black;
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
-.Red {
-  background-color: red;
+.Lock {
+  font-family: Arial, Helvetica, sans-serif;
+  display: table-cell;
+  font-size: 25px;
+  border-width: 7px;
+  border-radius: 15px;
+  border-style: solid;
+  width: 20px;
+  height: 33px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
-.Green {
-  background-color: green;
-}
-
-.Blue {
-  background-color: blue;
-}
-
-.Yellow {
-  background-color: yellow;
+.Score {
+  font-family: Arial, Helvetica, sans-serif;
+  display: table-cell;
+  font-size: 25px;
+  border-width: 7px;
+  border-radius: 15px;
+  border-style: solid;
+  width: 80px;
+  height: 33px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 .Checked {
