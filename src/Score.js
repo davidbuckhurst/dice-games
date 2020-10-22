@@ -5,7 +5,7 @@ class Score extends React.Component {
 
     return (
       <div className={["Score", this.props.colour ].join(' ')}>
-        <span>{this.props.score}</span>
+        <span>{this.props.score[0]}</span>
       </div>
     );
   }
