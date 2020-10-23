@@ -12,9 +12,9 @@ class Lock extends React.Component {
   render() {
 
     return (
-      <div className={["Lock", this.props.colour, this.state.checked ? "Checked" : "Unchecked" ].join(' ')}>
-      
-        <span>🔒</span>
+      <div className={["Lock", this.props.colour, this.props.checked ? "Checked" : "Unchecked" ].join(' ')}
+              onClick={() => this.props.onClick()}>
+        <span>&#128274;</span>
       </div>
     );
   }

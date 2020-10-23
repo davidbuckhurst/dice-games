@@ -11,8 +11,10 @@ class ColourRow extends React.Component {
                checked={checked} 
                onClick={() => {this.props.clickHandler(value-2)}}/>;
   }
-  renderLock(colour) {
-    return <Lock colour={colour} />;
+  renderLock(colour, checked) {
+    return <Lock colour={colour}
+            checked={checked}
+            onClick={() => {this.props.clickHandler(11)}}/>;
   }
   renderScore(colour, score) {
     return <Score colour={colour} score={score} />;
@@ -33,8 +35,7 @@ class ColourRow extends React.Component {
         {this.renderNumber(this.props.colour,10,this.props.checks[8])}
         {this.renderNumber(this.props.colour,11,this.props.checks[9])}
         {this.renderNumber(this.props.colour,12,this.props.checks[10])}
-        {this.renderLock(this.props.colour)}
-        {this.renderScore(this.props.colour, this.props.score)}
+        {this.renderLock(this.props.colour,this.props.checks[11])}
       </div>
     );
   }

@@ -1,12 +1,14 @@
 import React from 'react';
 import ColourRow from './ColourRow';
 import Score from './Score';
+import ScoringRules from './ScoringRules';
 
 class ScoreBoard extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      penalties: Array(4).fill(null),
       reds: Array(12).fill(null),
       greens: Array(12).fill(null),
       yellows: Array(12).fill(null),
@@ -14,7 +16,9 @@ class ScoreBoard extends React.Component {
       redScore: Array(1).fill(0),
       greenScore: Array(1).fill(0), 
       blueScore: Array(1).fill(0), 
-      yellowScore: Array(1).fill(0)
+      yellowScore: Array(1).fill(0),
+      penaltyScore: Array(1).fill(0),
+      totalScore: 0
     };
   }
   
@@ -30,18 +34,31 @@ class ScoreBoard extends React.Component {
   }
 
   handleClick(i, checks, score) {
-    console.log(`Handle Click ${i} ${checks} ${score}`)
-    
-    //const checks = this.state.checks.slice();
     checks[i] = !checks[i];
 
     var newScore = this.calculateScore(checks);
     console.log("Scores " + score + " " + newScore)
     score[0] = newScore;
 
-    var newTotal = this.state.yellowScore + this.state.redScore + this.state.blueScore + this.state.yellowScore
+    var newTotal = this.state.yellowScore[0] + this.state.redScore[0] + this.state.blueScore[0] + this.state.greenScore[0] - this.state.penaltyScore[0]
+    this.setState({totalScore: newTotal });
+  }
 
-    this.setState({total: newTotal });
+  handlePenaltyClick(i, array, score) {
+    array[i] = !array[i];
+
+    var count = 0;
+    for(var i = 0; i < array.length; ++i){
+      if(array[i] === true)
+        count++;
+    }
+
+    var newScore = count * 5;
+    console.log("Scores " + score + " " + newScore)
+    score[0] = newScore;
+
+    var newTotal = this.state.yellowScore[0] + this.state.redScore[0] + this.state.blueScore[0] + this.state.greenScore[0] - this.state.penaltyScore[0]
+    this.setState({totalScore: newTotal });
   }
 
 
@@ -54,6 +71,12 @@ class ScoreBoard extends React.Component {
     return <Score colour={colour} score={score} />; 
   }
 
+  renderScoringRulesAndPenalty(penalties, score) {
+    return <ScoringRules penalties={penalties} 
+      clickHandler={(index) => {this.handlePenaltyClick(index, penalties, score )}}
+    />;
+  }
+
   render() {
 
     return (
@@ -63,10 +86,16 @@ class ScoreBoard extends React.Component {
         {this.renderRow("Green", this.state.greens, this.state.greenScore)}
         {this.renderRow("Yellow", this.state.yellows, this.state.yellowScore)}
 
-        {this.renderScore("Red", this.state.redScore)}
-        {this.renderScore("Blue", this.state.blueScore)}
-        {this.renderScore("Green", this.state.greenScore)}
-        {this.renderScore("Yellow", this.state.yellowScore)}
+        {this.renderScoringRulesAndPenalty(this.state.penalties, this.state.penaltyScore)}
+
+        <div className="ScoreRow">
+        {this.renderScore("Red", this.state.redScore)} <div className="Divider">+</div>
+        {this.renderScore("Blue", this.state.blueScore)} <div className="Divider">+</div>
+        {this.renderScore("Green", this.state.greenScore)} <div className="Divider">+</div>
+        {this.renderScore("Yellow", this.state.yellowScore) }<div className="Divider">-</div>
+        {this.renderScore("Grey", this.state.penaltyScore) }<div className="Divider">=</div>
+        {this.renderScore("Total", this.state.totalScore)} 
+        </div>         
       </div>
     );
   }

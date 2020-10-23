@@ -33,20 +33,92 @@ code {
   color: rgb(240,210,110);
 }
 
-
-.ColourRow {
+.ColourRow, .ScoringRules, .ScoreRow {
   border-style: solid;
   border-width: 2px;
-  border-color: white;
   border-radius: 15px;
+  border-color: white;
+}
+
+.ColourRow {}
+
+.ScoringRules {
+  background: grey;
+  padding: 5px;
+}
+
+.ScoreRow {
+  padding-left: 30px;
+  background-color: grey;
+  padding: 10px;
 }
 
 .ScoreBoard {
   padding: 50px;
-  width: 850px;
+  width: 750px;
+}
+
+.Count {
+  height: 50px;
 }
 
 
+.Rule {
+  display: table-cell;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-width: 6px;
+  border-radius: 15px;
+  border-style: solid;
+  color: grey;
+  background-color: lightgrey;
+  width: 35px;
+  height: 45px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.RuleScore, .RuleCount {
+  
+}
+
+.Penalties {
+  display: table-cell;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 10px;
+  border-radius: 15px;
+}
+
+.Text {
+  color: white;
+}
+
+.Penalty {
+  display: table-cell;
+  border-width: 6px;
+  border-radius: 10px;
+  border-style: solid;
+  color: grey;
+  background-color: lightgrey;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.Divider {
+  font-family: Arial, Helvetica, sans-serif;
+  display: table-cell;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
 
 .Score, .Lock, .Number {
   font-family: Arial, Helvetica, sans-serif;
@@ -62,6 +134,7 @@ code {
   vertical-align: middle;
   font-weight: bold;
   background-color: hsla(0, 0%, 100%, 0.8);
+  cursor: pointer;
 }
 
 .Lock {
@@ -69,14 +142,19 @@ code {
 }
 
 .Score {
-  width: 80px;
+  width: 70px;
 }
 
 .Checked {
   background-color: black;
   opacity: 50%;
+  cursor: not-allowed;
 }
 
 .Unchecked {
 
+}
+
+.Total {
+  width: 100px;
 }
