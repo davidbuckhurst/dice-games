@@ -14,8 +14,8 @@ code {
 
 
 .Red {
-  background-color: red;
-  color: red;
+  background-color: orangered;
+  color: orangered;
 }
 
 .Green {
@@ -44,7 +44,7 @@ code {
 
 .ScoringRules {
   background: grey;
-  padding: 5px;
+  padding: 10px;
 }
 
 .ScoreRow {
@@ -142,12 +142,12 @@ code {
 }
 
 .Score {
-  width: 70px;
+  width: 80px;
 }
 
 .Checked {
   background-color: black;
-  opacity: 50%;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -156,5 +156,5 @@ code {
 }
 
 .Total {
-  width: 100px;
+  width: 150px;
 }
