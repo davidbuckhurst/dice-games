@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/dice-games/static/css/main.3b9a654c.chunk.css",
-    "main.js": "/dice-games/static/js/main.dc85c66f.chunk.js",
-    "main.js.map": "/dice-games/static/js/main.dc85c66f.chunk.js.map",
+    "main.css": "/dice-games/static/css/main.313a271b.chunk.css",
+    "main.js": "/dice-games/static/js/main.cafb7fd7.chunk.js",
+    "main.js.map": "/dice-games/static/js/main.cafb7fd7.chunk.js.map",
     "runtime-main.js": "/dice-games/static/js/runtime-main.94b1f3ab.js",
     "runtime-main.js.map": "/dice-games/static/js/runtime-main.94b1f3ab.js.map",
     "static/js/2.21fa76d3.chunk.js": "/dice-games/static/js/2.21fa76d3.chunk.js",
     "static/js/2.21fa76d3.chunk.js.map": "/dice-games/static/js/2.21fa76d3.chunk.js.map",
     "index.html": "/dice-games/index.html",
-    "precache-manifest.f9834abbacb091f43ea0a925395927b4.js": "/dice-games/precache-manifest.f9834abbacb091f43ea0a925395927b4.js",
+    "precache-manifest.489cc3e76586e7c65e5adbe45f6da0c9.js": "/dice-games/precache-manifest.489cc3e76586e7c65e5adbe45f6da0c9.js",
     "service-worker.js": "/dice-games/service-worker.js",
-    "static/css/main.3b9a654c.chunk.css.map": "/dice-games/static/css/main.3b9a654c.chunk.css.map",
+    "static/css/main.313a271b.chunk.css.map": "/dice-games/static/css/main.313a271b.chunk.css.map",
     "static/js/2.21fa76d3.chunk.js.LICENSE.txt": "/dice-games/static/js/2.21fa76d3.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/dice-games/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.94b1f3ab.js",
     "static/js/2.21fa76d3.chunk.js",
-    "static/css/main.3b9a654c.chunk.css",
-    "static/js/main.dc85c66f.chunk.js"
+    "static/css/main.313a271b.chunk.css",
+    "static/js/main.cafb7fd7.chunk.js"
   ]
 }
