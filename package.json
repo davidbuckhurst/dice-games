@@ -1,6 +1,6 @@
 {
   "name": "dice-game",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "http://davidbuckhurst.github.io/dice-games",
   "private": true,
   "dependencies": {

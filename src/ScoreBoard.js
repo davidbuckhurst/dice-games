@@ -23,6 +23,13 @@ class ScoreBoard extends React.Component {
       totalScore: 0
     };
 
+    var fullRow = Math.floor((Math.random() * 4) )
+    if (fullRow != 0 ) { this.state.reds[Math.floor((Math.random() * 6) )] = "x" }
+    if (fullRow != 1 ) { this.state.greens[Math.floor((Math.random() * 6) )] = "x" }
+    if (fullRow != 2 ) { this.state.blues[Math.floor((Math.random() * 6) )] = "x" }
+    if (fullRow != 3 ) { this.state.yellows[Math.floor((Math.random() * 6) )] = "x" }
+    if (fullRow != 4 ) { this.state.purples[Math.floor((Math.random() * 6) )] = "x" }
+
   }
   
   calculateScore(array) {

@@ -10,6 +10,9 @@ function translateState(state) {
   if (state == true ) {
     return "Checked"
   }
+  if (state == "x") {
+    return "Disabled"
+  }
 }
 
 class Number extends React.Component {
