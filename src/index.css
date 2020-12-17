@@ -33,6 +33,11 @@ code {
   color: rgb(240,210,110);
 }
 
+.Purple {
+  background-color: purple;
+  color: purple;
+}
+
 .ColourRow, .ScoringRules, .ScoreRow {
   border-style: solid;
   border-width: 2px;
@@ -139,6 +144,7 @@ code {
 
 .Lock {
   width: 20px;
+  cursor: not-allowed;
 }
 
 .Score {
@@ -153,6 +159,10 @@ code {
 
 .Unchecked {
 
+}
+
+.Disabled {
+  font-size: 0px;
 }
 
 .Total {
